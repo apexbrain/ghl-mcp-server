@@ -1,0 +1,43 @@
+{
+  "name": "ghl-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server that exposes the full GoHighLevel API surface (auto-generated from the official @gohighlevel/api-client SDK)",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "ghl-mcp-server": "dist/server.js"
+  },
+  "scripts": {
+    "generate": "tsx src/codegen/generate.ts",
+    "build": "npm run generate && tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@gohighlevel/api-client": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-morph": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gohighlevel",
+    "ghl",
+    "claude"
+  ],
+  "license": "MIT"
+}
